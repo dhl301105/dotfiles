@@ -16,7 +16,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function(_, opts)
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd" },
+				ensure_installed = { "lua_ls", "clangd", "emmet_language_server" },
 			})
 		end,
 	},
@@ -120,6 +120,12 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 			require("lspconfig")["clangd"].setup({
+				capabilities = capabilities,
+			})
+			-- require("lspconfig")["lua_ls"].setup({
+			-- 	capabilities = capabilities,
+			-- })
+			require("lspconfig")["emmet_language_server"].setup({
 				capabilities = capabilities,
 			})
 		end,
