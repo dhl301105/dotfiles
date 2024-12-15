@@ -1,5 +1,9 @@
 local keymap = vim.keymap
 
+keymap.set("n", "<space>d", ":lua vim.diagnostic.open_float()<cr>")
+
+keymap.set("i", "jj", "<esc>")
+
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 

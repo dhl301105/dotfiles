@@ -3,6 +3,7 @@ vim.g.mapleader = " "
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
+
 vim.opt.wrap = true
 
 vim.opt.number = true
