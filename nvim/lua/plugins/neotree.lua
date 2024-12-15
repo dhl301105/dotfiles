@@ -1,7 +1,9 @@
 return {
 	"nvim-neo-tree/neo-tree.nvim",
 	keys = {
-		{ "<space>e", "<cmd>Neotree<cr>", desc = "Open Neotree" },
+		{ "<space>ee", "<cmd>Neotree<cr>", desc = "Open Neotree root dir" },
+		{ "<space>eh", "<cmd>Neotree ~<cr>", desc = "Open Neotree home dir" },
+		{ "<space>en", "<cmd>Neotree ~/.config/nvim<cr>", desc = "Open Neotree nvim dir" },
 	},
 	branch = "v3.x",
 	dependencies = {
