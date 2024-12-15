@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
+vim.diagnostic.config({
+	float = { border = "rounded" },
+})
 
 vim.opt.wrap = true
 
