@@ -4,6 +4,9 @@ keymap.set("n", "<space>d", ":lua vim.diagnostic.open_float()<cr>")
 
 keymap.set("i", "jj", "<esc>")
 
+-- refactor rename
+keymap.set({ "n", "v" }, "<space>rr", ":lua vim.lsp.buf.rename()<cr>")
+
 -- Select all
 keymap.set("n", "<C-a>", "gg<S-v>G")
 
