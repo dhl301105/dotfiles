@@ -51,7 +51,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function(_, opts)
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "clangd", "emmet_language_server", "pylsp", "eslint" },
+				ensure_installed = { "lua_ls", "clangd", "emmet_language_server", "pylsp", "eslint", "jdtls", "ts_ls" },
 			})
 		end,
 	},
@@ -165,7 +165,13 @@ return {
 			require("lspconfig")["emmet_language_server"].setup({
 				capabilities = capabilities,
 			})
+			require("lspconfig")["ts_ls"].setup({
+				capabilities = capabilities,
+			})
 			require("lspconfig")["eslint"].setup({
+				capabilities = capabilities,
+			})
+			require("lspconfig")["jdtls"].setup({
 				capabilities = capabilities,
 			})
 			require("lspconfig")["pylsp"].setup({
