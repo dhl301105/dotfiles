@@ -6,10 +6,6 @@ return {
     },
   },
   {
-    'stevearc/conform.nvim',
-    enabled = false,
-  },
-  {
     "folke/flash.nvim",
     enabled = false,
   }
