@@ -52,7 +52,7 @@ return {
 		"mfussenegger/nvim-lint",
 		config = function()
 			require("lint").linters_by_ft = {
-				html = { "eslint_d" },
+				html = { "htmlhint" },
 				javascript = { "eslint_d" },
 				cpp = { "cpplint" },
 				c = { "cpplint" },
@@ -81,12 +81,24 @@ return {
 					-- rust = { "rustfmt", lsp_format = "fallback" },
 					-- Conform will run the first available formatter
 					javascript = { "prettierd", stop_after_first = true },
+					html = { "prettierd", stop_after_first = true },
 				},
 				format_on_save = {
 					-- These options will be passed to conform.format()
 					timeout_ms = 500,
 					lsp_format = "fallback",
 				},
+			})
+			vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+				callback = function()
+					-- try_lint without arguments runs the linters defined in `linters_by_ft`
+					-- for the current filetype
+					require("lint").try_lint()
+
+					-- You can call `try_lint` with a linter name or a list of names to always
+					-- run specific linters, independent of the `linters_by_ft` configuration
+					-- require("lint").try_lint("cspell")
+				end,
 			})
 		end,
 	},
