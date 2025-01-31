@@ -181,7 +181,7 @@ label:focus {
 #memory {
   /*background-color: #9b59b6;*/
   background-color: transparent;
-  color: #9b59b6;
+  color: #42f5f2;
 }
 
 #disk {
@@ -191,6 +191,7 @@ label:focus {
 #backlight {
   /*background-color: #90b1b1;*/
   background-color: transparent;
+  color: #427bf5;
 }
 
 #network {
@@ -291,7 +292,7 @@ label:focus {
 #language {
   /*background: #00b093;*/
   background: transparent;
-  color: #740864;
+  color: #f542e6;
   padding: 0 5px;
   margin: 0 5px;
   min-width: 16px;
