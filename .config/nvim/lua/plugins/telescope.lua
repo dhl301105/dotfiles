@@ -6,7 +6,7 @@ return {
 	},
 	{
 		"nvim-telescope/telescope.nvim",
-		enabled = true,
+		enabled = false,
 		-- tag = "0.1.8",
 		dependencies = { "nvim-lua/plenary.nvim" },
 		config = function(_, opts)
@@ -15,6 +15,7 @@ return {
 			vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Telescope live grep" })
 			vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Telescope buffers" })
 			vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Telescope help tags" })
+			vim.keymap.set("n", "<leader>fd", builtin.diagnostics, { desc = "Telescope diagnostics" })
 			-- You dont need to set any of these options. These are the default ones. Only
 			-- the loading is important
 			require("telescope").setup({

@@ -2,7 +2,7 @@ local keymap = vim.keymap
 
 keymap.set("n", "<space>d", ":lua vim.diagnostic.open_float()<cr>")
 
-keymap.set({ "n", "v" }, "<c-s>", "<esc>:w<cr>")
+keymap.set({ "n", "i" }, "<c-s>", "<esc>:w<cr>")
 
 keymap.set("i", "jj", "<esc>")
 
