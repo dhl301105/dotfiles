@@ -12,7 +12,7 @@ keymap.set({ "n", "v" }, "<space>rr", ":lua vim.lsp.buf.rename()<cr>")
 -- Select all
 keymap.set("n", "<c-a>", "gg<S-v>G")
 
-keymap.set("n", "q", ":q<cr>")
+keymap.set("n", "q", "<esc>:qa<cr>")
 
 keymap.set("v", ">", ">gv")
 keymap.set("v", "<", "<gv")
