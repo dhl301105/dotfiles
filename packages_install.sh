@@ -5,7 +5,7 @@ sudo pacman -S fish git hyprland  wl-clipboard python3 npm btop foot  fisher  wa
 
 # sudo pacman -S dust duf dunst libnotify thermald
 
-sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-kr-fonts noto-fonts-emoji ttf-font-awesome
+sudo pacman -S adobe-source-han-sans-cn-fonts adobe-source-han-sans-tw-fonts adobe-source-han-sans-kr-fonts noto-fonts-emoji ttf-font-awesome ttf-joypixels 
 
 chsh -s /usr/bin/fish
 
