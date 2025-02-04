@@ -2,6 +2,8 @@ vim.g.mapleader = " "
 
 vim.o.termguicolors = true
 
+vim.opt.fillchars:append({ eob = " " })
+
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
