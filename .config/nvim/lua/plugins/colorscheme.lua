@@ -13,18 +13,18 @@ return {
 	},
 	{
 		"maxmx03/solarized.nvim",
-		enabled = true,
 		lazy = false,
 		priority = 1000,
-		config = function()
+		---@type solarized.config
+		opts = {
+			transparent = {
+				enabled = true,
+			},
+		},
+		config = function(_, opts)
 			vim.o.termguicolors = true
-			vim.o.background = "dark"
-
-			require("solarized").setup({
-				transparent = {
-					enabled = true,
-				},
-			})
+			vim.o.background = "light"
+			require("solarized").setup(opts)
 			vim.cmd.colorscheme("solarized")
 		end,
 	},
