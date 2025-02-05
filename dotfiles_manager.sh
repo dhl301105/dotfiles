@@ -2,35 +2,26 @@ config="$HOME/.config"
 dotfiles="$HOME/dotfiles"
 git_push="$dotfiles/git_push.sh"
 
-confirm_and_remove() {
-  local folder="$1"
+# Khởi tạo biến
+flag_r=false
 
-  # Kiểm tra nếu thư mục không tồn tại
-  if [ ! -d "$folder" ]; then
-    echo "❌ Thư mục '$folder' không tồn tại!"
-    return 1
-  fi
+# Xử lý từng ký tự trong đối số bắt đầu bằng '-'
+while getopts "rh" opt; do
+  case "$opt" in
+  r) flag_r=true ;;
+  h) echo "Usage: $0 [-r]" && exit 1 ;;
+  esac
+done
 
-  # Hỏi người dùng xác nhận
-  read -p "⚠️  Bạn có chắc muốn xóa '$folder'? (y/N): " confirm
+# Loại bỏ các tùy chọn đã xử lý để chỉ còn lại các tham số thực sự
+shift $((OPTIND - 1))
 
-  # Kiểm tra nếu nhập 'y' hoặc 'Y'
-  if [[ "$confirm" =~ ^[Yy]$ ]]; then
-    rm -rf "$folder"
-    echo "✅ Đã xóa '$folder'"
-  else
-    echo "❌ Hủy xóa thư mục."
-  fi
-}
-
-# Kiểm tra cờ -r
-if [ "$1" == "-r" ]; then
-  remove=true
-  exit 1
+if [[ ! -d "$dotfiles/.config" ]]; then
+  mkdir -p "$dotfiles/.config"
 fi
 
 for folder in $@; do
-  if [ "$remove" == "true" ]; then
+  if [ "$flag_r" == "true" ]; then
     rm -rf "$dotfiles/.config/$folder"
   fi
   if [ -d "$config/$folder" ]; then
