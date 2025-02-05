@@ -243,19 +243,22 @@ return {
 			---require("lspconfig")["jdtls"].setup({
 			---	capabilities = capabilities,
 			---})
-			-- require("lspconfig")["pylsp"].setup({
-			-- 	capabilities = capabilities,
-			-- 	settings = {
-			-- 		pylsp = {
-			-- 			plugins = {
-			-- 				pycodestyle = {
-			-- 					ignore = { "E225", "E226", "E231", "E501", "E251" },
-			-- 					maxLineLength = 100,
-			-- 				},
-			-- 			},
-			-- 		},
-			-- 	},
-			-- })
+			require("lspconfig")["pylsp"].setup({
+				capabilities = capabilities,
+				settings = {
+					pylsp = {
+						plugins = {
+							-- jedi = {
+							-- 	environment = python,
+							-- },
+							-- pycodestyle = {
+							-- 	ignore = { "E225", "E226", "E231", "E501", "E251" },
+							-- 	maxLineLength = 100,
+							-- },
+						},
+					},
+				},
+			})
 		end,
 	},
 }
