@@ -1,18 +1,23 @@
 return {
 	{
 		"folke/tokyonight.nvim",
-		enabled = false,
+		enabled = true,
 		lazy = false,
 		priority = 1000,
 		config = function(_, opts)
 			require("tokyonight").setup({
 				transparent = true,
+				styles = {
+					sidebars = "transparent",
+					floats = "transparent",
+				},
 			})
 			vim.cmd.colorscheme("tokyonight")
 		end,
 	},
 	{
 		"maxmx03/solarized.nvim",
+		enabled = false,
 		lazy = false,
 		priority = 1000,
 		---@type solarized.config
