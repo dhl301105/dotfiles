@@ -28,4 +28,4 @@ keymap.set("n", "<c-l>", "<c-w><right>")
 keymap.set("n", "j", "gj")
 keymap.set("n", "k", "gk")
 
-keymap.set("v", "p", '"_dp')
+-- keymap.set("v", "p", '"_dp')
