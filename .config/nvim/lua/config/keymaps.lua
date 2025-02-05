@@ -28,4 +28,6 @@ keymap.set("n", "<c-l>", "<c-w><right>")
 keymap.set("n", "j", "gj")
 keymap.set("n", "k", "gk")
 
+keymap.set("n", "<esc>", "<esc>:noh<cr>")
+
 -- keymap.set("v", "p", '"_dp')
