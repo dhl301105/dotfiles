@@ -160,7 +160,7 @@ entry {
     cursor:            text;
     spacing:           0;
     placeholder-color: Gray;
-    placeholder:       "Type to filter";
+    placeholder:       "";
 }
 prompt {
     spacing:    0;
