@@ -1,7 +1,6 @@
-
 sudo pacman -Syyu
 
-sudo pacman -S fish git hyprland  wl-clipboard python3 npm btop foot  fisher  waybar hyprpaper fuzzel unzip base-devel 
+sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot fisher waybar hyprpaper fuzzel unzip base-devel fd
 
 # sudo pacman -S dust duf dunst libnotify thermald
 
