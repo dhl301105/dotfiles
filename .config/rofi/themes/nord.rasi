@@ -1,0 +1,45 @@
+@define-color bg rgba(46, 52, 64, 0.9); /* Màu nền trong suốt 90% */
+@define-color border rgba(67, 76, 94, 0.7);
+@define-color text #D8DEE9;
+@define-color selected-text #2E3440;
+@define-color selected-bg #88C0D0;
+@define-color selected-border #5E81AC;
+
+* {
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    background-color: @bg;
+    border: 2px solid @border;
+    border-radius: 12px;
+    padding: 20px;
+    width: 50%;
+}
+
+inputbar {
+    background-color: rgba(67, 76, 94, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+entry {
+    color: @text;
+}
+
+listview {
+    scrollbar: false;
+    spacing: 10px;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+element selected {
+    background-color: @selected-bg;
+    color: @selected-text;
+    border: 2px solid @selected-border;
+}
