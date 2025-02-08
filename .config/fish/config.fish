@@ -3,7 +3,13 @@ if status is-interactive
 
 end
 
+set -x EDITOR "nvim"
+
 alias c="clear"
+
+function x
+  nohup $argv &
+end
 
 function fish_greeting
 
