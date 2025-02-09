@@ -2,6 +2,7 @@
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: SauceCodeProNerdFontMono FiraMonoNerdFontMono, Roboto, Helvetica, Arial, sans-serif;
   font-size: 14px;
+  font-weight: bold;
 }
 
 window#waybar {
@@ -122,7 +123,7 @@ button:hover {
 #clock {
   /*background-color: #64727D;*/
   background-color: transparent;
-  color: #64727D;
+  color: #ffffff;
 }
 
 #battery {
@@ -181,13 +182,13 @@ label:focus {
 #cpu {
   /*background-color: #2ecc71;*/
   background-color: transparent;
-  color: #2ecc71;
+  color: #ffffff;
 }
 
 #memory {
   /*background-color: #9b59b6;*/
   background-color: transparent;
-  color: #42f5f2;
+  color: #ffffff;
 }
 
 #disk {
@@ -197,13 +198,13 @@ label:focus {
 #backlight {
   /*background-color: #90b1b1;*/
   background-color: transparent;
-  color: #427bf5;
+  color: #ffffff;
 }
 
 #network {
   /*background-color: #2980b9;*/
   background-color: transparent;
-  color: #2980b9;
+  color: #ffffff;
 }
 
 #network.disconnected {
@@ -213,7 +214,7 @@ label:focus {
 #pulseaudio {
   /*background-color: #f1c40f;*/
   background-color: transparent;
-  color: #f1c40f;
+  color: #ffffff;
 }
 
 #pulseaudio.muted {
@@ -248,7 +249,7 @@ label:focus {
 #temperature {
   /*background-color: #f0932b;*/
   background-color: transparent;
-  color: #ff0099;
+  color: #ffffff;
 }
 
 #temperature.critical {
