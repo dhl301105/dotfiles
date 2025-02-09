@@ -1,6 +1,7 @@
 vim.g.mapleader = " "
 
 vim.o.termguicolors = true
+vim.o.background = "dark"
 
 vim.opt.fillchars:append({ eob = " " })
 
