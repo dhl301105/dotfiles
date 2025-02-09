@@ -14,3 +14,7 @@ end
 function fish_greeting
 
 end
+
+function fish_prompt
+  printf '%s ❯ ' (prompt_pwd)
+end
