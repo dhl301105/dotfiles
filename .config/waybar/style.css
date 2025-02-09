@@ -56,7 +56,7 @@ button:hover {
 
 /* you can set a style on hover for any module like this */
 #pulseaudio:hover {
-  background-color: #a37800;
+  background-color: transparent;
 }
 
 #workspaces button {
@@ -253,7 +253,7 @@ label:focus {
 }
 
 #temperature.critical {
-  background-color: #eb4d4b;
+  background-color: #ffffff;
 }
 
 #tray {
@@ -299,15 +299,15 @@ label:focus {
 #language {
   /*background: #00b093;*/
   background: transparent;
-  color: #f542e6;
+  color: #ffffff;
   padding: 0 5px;
   margin: 0 5px;
   min-width: 16px;
 }
 
 #keyboard-state {
-  background: #97e1ad;
-  color: #000000;
+  background: transparent;
+  color: #ffffff;
   padding: 0 0px;
   margin: 0 5px;
   min-width: 16px;
