@@ -1,6 +1,4 @@
-
-
-packages="cava google-chrome"
+packages="cava google-chrome debtap"
 
 base="$(pwd)"
 
@@ -8,9 +6,7 @@ if [ ! -d "$HOME/Downloads" ]; then
   mkdir -p "$HOME/Downloads"
 fi
 
-
-for package in $packages
-do
+for package in $packages; do
   cd "$HOME/Downloads"
   git clone "https://aur.archlinux.org/$package.git"
   if [[ -d "$package" ]]; then
@@ -18,4 +14,3 @@ do
     makepkg -si
   fi
 done
-
