@@ -54,6 +54,7 @@ return {
 			require("lint").linters_by_ft = {
 				html = { "htmlhint" },
 				javascript = { "eslint_d" },
+				typescript = { "eslint_d" },
 				cpp = { "cpplint" },
 				c = { "cpplint" },
 			}
@@ -85,6 +86,7 @@ return {
 					-- Conform will run the first available formatter
 					javascript = { "prettierd", stop_after_first = true },
 					html = { "prettierd", stop_after_first = true },
+					typescript = { "prettierd", stop_after_first = true },
 				},
 				format_on_save = {
 					-- These options will be passed to conform.format()
@@ -238,9 +240,9 @@ return {
 			require("lspconfig")["ts_ls"].setup({
 				capabilities = capabilities,
 			})
-			require("lspconfig")["eslint"].setup({
-				capabilities = capabilities,
-			})
+			-- require("lspconfig")["eslint"].setup({
+			-- 	capabilities = capabilities,
+			-- })
 			---require("lspconfig")["jdtls"].setup({
 			---	capabilities = capabilities,
 			---})
