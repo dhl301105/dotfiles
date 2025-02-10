@@ -1,4 +1,4 @@
-packages="cava google-chrome debtap"
+packages="cava google-chrome visual-studio-code-bin"
 
 base="$(pwd)"
 
