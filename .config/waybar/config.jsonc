@@ -13,7 +13,7 @@
   // Choose the order of the modules
   "modules-left": [
     "hyprland/workspaces",
-    "weather"
+    "custom/weather"
     // "hyprland/mode",
     // "hyprland/scratchpad",
     // "custom/media"
@@ -39,7 +39,7 @@
     // "tray"
     // "custom/power"
   ],
-  "weather": {
+  "custom/weather": {
     "type": "custom/script",
     "exec": "~/.config/waybar/scripts/weather.sh",
     "interval": 3600
