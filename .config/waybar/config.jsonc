@@ -18,7 +18,7 @@
     // "custom/media"
   ],
   // "modules-center": [
-  // "hyprland/window"
+    // "hyprland/window"
   // ],
   "modules-right": [
     // "mpd",
@@ -44,18 +44,8 @@
     "all-outputs": true,
     "warp-on-scroll": false,
     // "format": "{name}: {icon}",
-    "format": "{name}",
+    "format": "{icon}",
     "format-icons": {
-      "1": "",
-      "2": "",
-      "3": "",
-      "4": "",
-      "5": "",
-      "6": "",
-      "7": "",
-      "8": "",
-      "9": "",
-      "10": "",
       "urgent": "",
       "focused": "",
       "default": ""
@@ -130,7 +120,7 @@
     "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "{}% "
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -139,9 +129,9 @@
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
     "format-icons": [
-      "",
       "",
-      ""
+      "",
+      ""
     ]
   },
   "backlight": {
@@ -196,8 +186,8 @@
   },
   "network": {
     // "interface": "wlp2*", // (Optional) To force the use of this interface
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
+    "format-wifi": "{wifi_name} ({signalStrength}%) ",
+    "format-ethernet": "Ethernet ",
     "tooltip-format": "{ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
