@@ -12,13 +12,14 @@
   // "margin-right": 10,
   // Choose the order of the modules
   "modules-left": [
-    "hyprland/workspaces"
+    "hyprland/workspaces",
+    "weather"
     // "hyprland/mode",
     // "hyprland/scratchpad",
     // "custom/media"
   ],
   // "modules-center": [
-    // "hyprland/window"
+  // "hyprland/window"
   // ],
   "modules-right": [
     // "mpd",
@@ -38,6 +39,11 @@
     // "tray"
     // "custom/power"
   ],
+  "weather": {
+    "type": "custom/script",
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "interval": 3600
+  },
   // Modules configuration
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -66,10 +72,7 @@
   "sway/scratchpad": {
     "format": "{icon} {count}",
     "show-empty": false,
-    "format-icons": [
-      "",
-      ""
-    ],
+    "format-icons": ["", ""],
     "tooltip": true,
     "tooltip-format": "{app}: {title}"
   },
@@ -122,7 +125,6 @@
   "memory": {
     "format": "{}% ",
     "tooltip": false
-
   },
   "temperature": {
     // "thermal-zone": 2,
@@ -130,27 +132,13 @@
     "critical-threshold": 80,
     // "format-critical": "{temperatureC}°C {icon}",
     "format": "{temperatureC}°C {icon}",
-    "format-icons": [
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", ""],
     "tooltip": false
   },
   "backlight": {
     // "device": "acpi_video1",
     "format": "{percent}% {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
   },
   "battery": {
     "states": {
@@ -165,13 +153,7 @@
     "format-alt": "{time} {icon}",
     // "format-good": "", // An empty format will hide the module
     // "format-full": "",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    "format-icons": ["", "", "", "", ""],
     "tooltip": false
   },
   "battery#bat2": {
@@ -213,11 +195,7 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
+      "default": ["", "", ""]
     },
     "on-click": "pavucontrol",
     "tooltip": false
