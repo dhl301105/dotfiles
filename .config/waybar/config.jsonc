@@ -35,9 +35,9 @@
     // "hyprland/language",
     "battery",
     "battery#bat2",
-    "clock"
+    "clock",
     // "tray"
-    // "custom/power"
+    "custom/power"
   ],
   "custom/weather": {
     "type": "custom/script",
@@ -223,5 +223,5 @@
       "suspend": "systemctl suspend",
       "hibernate": "systemctl hibernate"
     }
-  }
+  },
 }
