@@ -1,6 +1,6 @@
 sudo pacman -Syyyuu
 
-sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot waybar hyprpaper fuzzel unzip base-devel fd rofi-wayland dust duf libva-nvidia-driver inotify-tools dpkg
+sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot waybar hyprpaper fuzzel unzip base-devel fd rofi-wayland dust duf jq libva-nvidia-driver inotify-tools dpkg
 
 # sudo pacman -S dunst libnotify thermald fisher
 

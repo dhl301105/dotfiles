@@ -1,4 +1,5 @@
-packages="cava google-chrome visual-studio-code-bin ttf-noto-emoji-monochrome otf-openmoji ttf-symbola-free ttf-twemoji ttf-twemoji-color"
+packages="cava google-chrome visual-studio-code-bin"
+# packages="ttf-noto-emoji-monochrome otf-openmoji ttf-symbola-free ttf-twemoji ttf-twemoji-color"
 
 base="$(pwd)"
 
