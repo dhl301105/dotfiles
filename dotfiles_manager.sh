@@ -13,13 +13,11 @@ fi
 # Khởi tạo biến
 flag_r=false
 
-
-
 # Xử lý từng ký tự trong đối số bắt đầu bằng '-'
 while getopts "ra" opt; do
   case "$opt" in
   r) flag_r=true ;;
-  a) folders+=$folders_1 ;;
+  a) folders=$folders_1 ;;
   ?) echo "Usage: $0 [-r]" && exit 1 ;;
   esac
 done
