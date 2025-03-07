@@ -5,7 +5,9 @@ if [ -f /etc/arch-release ]; then
 
   sudo pacman -Syyyuu
 
-  sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot waybar hyprpaper fuzzel unzip base-devel fd rofi-wayland dust duf jq libva-nvidia-driver inotify-tools dpkg firefox fcitx5-im fcitx5-gtk fcitx5-unikey fcitx5-qt
+  # sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot waybar hyprpaper fuzzel unzip base-devel fd rofi-wayland dust duf jq libva-nvidia-driver inotify-tools dpkg firefox fcitx5-im fcitx5-gtk fcitx5-unikey fcitx5-qt kwindowsystem
+
+  sudo pacman -S fish git i3 xclip python3 npm btop alacritty polybar feh rofi unzip base-devel fd dust duf jq libva-nvidia-driver inotify-tools dpkg firefox ibus ibus-unikey kwindowsystem
 
   # sudo pacman -S dunst libnotify thermald fisher
 
