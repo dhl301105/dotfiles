@@ -1,5 +1,5 @@
 packages=""
-packages_1="cava google-chrome visual-studio-code-bin"
+packages_1="google-chrome visual-studio-code-bin"
 # packages="ttf-noto-emoji-monochrome otf-openmoji ttf-symbola-free ttf-twemoji ttf-twemoji-color"
 
 base="$(pwd)"
@@ -7,7 +7,6 @@ base="$(pwd)"
 if [ ! -d "$HOME/Downloads" ]; then
   mkdir -p "$HOME/Downloads"
 fi
-
 
 # Check if any arguments are passed to the script.
 # If no arguments are passed, the condition will be true.
