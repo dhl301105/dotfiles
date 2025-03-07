@@ -11,4 +11,6 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 eval "$(starship init zsh)"
