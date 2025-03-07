@@ -29,11 +29,7 @@ if [[ ! -d "$dotfiles/.config" ]]; then
   mkdir -p "$dotfiles/.config"
 fi
 
-# If arguments are provided, the condition will be true.
-# If no arguments are provided, the condition will be true.
-if [ ! -z "$@" ]; then
-  folders="$@"
-fi
+folders+="$@"
 
 for folder in $folders; do
   if [ "$flag_r" == "true" ] && [ -d "$dotfiles/.config/$folder" ]; then
