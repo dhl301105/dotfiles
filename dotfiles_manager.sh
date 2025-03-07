@@ -32,7 +32,7 @@ fi
 # If arguments are provided, the condition will be true.
 # If no arguments are provided, the condition will be true.
 if [ ! -z "$@" ]; then
-  folders=$@
+  folders="$@"
 fi
 
 for folder in $folders; do
