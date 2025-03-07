@@ -2,7 +2,7 @@ config="$HOME/.config"
 dotfiles="$HOME/dotfiles"
 git_push="$dotfiles/git_push.sh"
 folders=""
-folders_1="waybar nvim hypr foot fontconfig rofi fuzzel"
+folders_1="waybar nvim hypr foot fontconfig rofi fuzzel sxhkd alacritty bspwm polybar"
 
 # Kiểm tra nếu không có tham số thư mục
 if [ $# -eq 0 ]; then

@@ -7,7 +7,7 @@ if [ -f /etc/arch-release ]; then
 
   # sudo pacman -S fish git hyprland wl-clipboard python3 npm btop foot waybar hyprpaper fuzzel unzip base-devel fd rofi-wayland dust duf jq libva-nvidia-driver inotify-tools dpkg firefox fcitx5-im fcitx5-gtk fcitx5-unikey fcitx5-qt kwindowsystem
 
-  sudo pacman -S fish git i3 xclip python3 npm btop alacritty polybar feh rofi unzip base-devel fd dust duf jq libva-nvidia-driver inotify-tools dpkg firefox ibus ibus-unikey kwindowsystem
+  sudo pacman -S zsh git bspwm picom xclip python3 npm btop alacritty polybar feh xorg rofi unzip libva-nvidia-driver firefox ibus ibus-unikey starship
 
   # sudo pacman -S dunst libnotify thermald fisher
 
@@ -23,7 +23,7 @@ if [ -f /etc/arch-release ]; then
 
   # systemctl enable --now thermald
 
-  chsh -s /usr/bin/fish
+  chsh -s /usr/bin/zsh
 
 # fisher install IlanCosman/tide@v6
 elif [ -f /etc/debian_version ]; then

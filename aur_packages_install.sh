@@ -1,5 +1,5 @@
 packages=""
-packages_1="google-chrome visual-studio-code-bin"
+packages_1="visual-studio-code-bin"
 # packages="ttf-noto-emoji-monochrome otf-openmoji ttf-symbola-free ttf-twemoji ttf-twemoji-color"
 
 base="$(pwd)"
