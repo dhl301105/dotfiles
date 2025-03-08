@@ -1,0 +1,92 @@
+* {
+  all: unset; // Unsets everything so you can style everything from scratch
+}
+
+// Global Styles
+.bar {
+  background-color: #1A1A26;
+  color: #b0b4bc;
+  border-radius: 10px;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+button {
+  background-color: #1A1A26;
+  color: #b0b4bc;
+  padding: 5px;
+  margin: 5px;
+}
+
+// Styles on classes (see eww.yuck for more information)
+
+.sidestuff slider {
+  all: unset;
+  color: #ffd5cd;
+}
+
+.metric scale trough highlight {
+  all: unset;
+  background-color: #D35D6E;
+  color: #000000;
+  border-radius: 10px;
+}
+
+scale trough {
+  all: unset;
+  background-color: #4e4e4e;
+  border-radius: 50px;
+  min-height: 10px;
+  min-width: 60px;
+  margin: 5px;
+}
+
+scale {
+  margin: 5px
+}
+
+.label-ram {
+  font-size: large;
+}
+
+.button{
+  font-size: 30px;
+  padding: 0 10px 0 10px;
+}
+
+.button:hover {
+  color: #D35D6E;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.volume{
+  color: #73DAC8;
+}
+
+
+.wifi{
+  color: #73DAC8;
+}
+
+
+.ram{
+  color: #BB9AF7;
+}
+
+.disk{
+  color: #DFAE67;
+}
+
+.focus {
+  color: #D35D6E;
+}
+
+.bat {
+  color: #6bd35d;
+}

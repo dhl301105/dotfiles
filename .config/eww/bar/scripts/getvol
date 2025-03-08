@@ -1,0 +1,14 @@
+#!/bin/sh
+
+if
+    command -v wpctl &
+    >/dev/null
+then
+    if [ true == $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | grep -q "MUTED" && echo "true" || echo "false") ]; then
+        echo 0
+        exit
+    else
+        wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}'
+
+    fi
+fi

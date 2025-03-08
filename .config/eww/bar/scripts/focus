@@ -1,0 +1,29 @@
+#!/bin/sh
+
+eww="$HOME/dotfiles/release/eww"
+
+# Reset tất cả workspace về trạng thái rỗng
+r() {
+  for i in $(seq 1 6); do
+    ${eww} update ws$i=''
+  done
+}
+
+# Xử lý workspace được focus
+handle() {
+  input="$1"
+
+  # Nếu không có tham số, đọc từ stdin
+  if [ -z "$input" ]; then
+    read -r input
+  fi
+
+  # Kiểm tra input có hợp lệ không (phải là số từ 1 đến 6)
+  if [ "$input" -ge 1 ] 2>/dev/null && [ "$input" -le 6 ]; then
+    ${eww} update ws$input='focus'
+  fi
+}
+
+# Reset trước, sau đó focus vào workspace được truyền vào
+r
+handle "$1"
