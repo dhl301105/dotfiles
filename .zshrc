@@ -13,6 +13,35 @@ compinit
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
+bindkey '^[^?' backward-kill-word
+
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+
+r() {
+  flag_s=false
+  flag_n=false
+  killall $1
+  # Xử lý từng ký tự trong đối số bắt đầu bằng '-'
+  while getopts "sn" opt; do
+    case "$opt" in
+    s) flag_s=true ;;
+    n) flag_n=true ;;
+    ?) echo "Usage: $0 [-s] [-n]" && exit 1 ;;
+    esac
+  done
+
+  # Loại bỏ các tùy chọn đã xử lý để chỉ còn lại các tham số thực sự
+  shift $((OPTIND - 1))
+
+  if [ $flag_n = true ] && [ $flag_s = true ]; then
+    nohup $1 > /dev/null 2>&1 &
+  elif [ $flag_n = true ]; then
+    nohup $1 &
+  elif [ $flag_s = true ]; then
+    $1 > /dev/null 2>&1
+  else
+    $1
+  fi
+}

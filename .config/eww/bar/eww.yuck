@@ -32,6 +32,10 @@
       :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
       :onclick ""
     :onchange "")
+    (metric :class "temp icon" :label ""
+      :value temp
+      :onclick ""
+    :onchange "")
     (metric :class "bat icon" :label "󰁹"
       :onclick ""
       :value bat
@@ -129,11 +133,11 @@
 (defpoll bat :interval "30s"
 "sh ./scripts/battery --bat")
 
-(defpoll time :interval "10s"
-"date '+%H:%M %b %d, %Y'")
-
 (defpoll cpu :interval "1s"
 "top -bn1 | grep 'Cpu(s)' | awk '{print 100 - $8}'")
+
+(defpoll temp :interval "1s"
+"sensors | grep 'Package id 0' | awk '{print $4}' | sed 's/+//; s/\\..*//'")
 
 (defwindow bar
   :class "bar"
