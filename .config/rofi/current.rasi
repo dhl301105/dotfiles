@@ -33,7 +33,7 @@
     alternate-active-foreground: var(blue);
 }
 element {
-    padding: 15px 10px 15px 40px ;
+    padding: 10px 5px 10px 30px ;
     cursor:  pointer;
     spacing: 5px ;
     border:  0;
@@ -83,7 +83,7 @@ element-text {
 }
 element-icon {
     background-color: transparent;
-    size:             1.0000em ;
+    size:             1em ;
     cursor:           inherit;
     text-color:       inherit;
 }
