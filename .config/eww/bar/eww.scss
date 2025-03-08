@@ -79,6 +79,10 @@ scale {
   color: #BB9AF7;
 }
 
+.cpu{
+  color: #7573da;
+}
+
 .disk{
   color: #DFAE67;
 }
@@ -89,4 +93,30 @@ scale {
 
 .bat {
   color: #6bd35d;
+}
+
+// Calendar
+.cal {
+  background-color: #0f0f17;
+  font-family: JetBrainsMono Nerd Font;
+  font-size: 18px;
+  font-weight: normal;
+
+.cal-in {
+    padding: 0px 10px 0px 10px;
+    color: #bfc9db;
+
+.cal {
+     &.highlight {
+          padding: 20px;
+      }
+
+      padding: 5px 5px 5px 5px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.calendar {
+  border-radius: 20px;
 }

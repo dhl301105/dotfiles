@@ -1,7 +1,7 @@
 
 (defvar eww "$HOME/dotfiles/release/eww  -c $HOME/.config/eww/bar")
 
-(defvar ws1 "")
+(defvar ws1 "focus")
 (defvar ws2 "")
 (defvar ws3 "")
 (defvar ws4 "")
@@ -20,6 +20,10 @@
       :onclick "blueman-manager &"
       :value volume
     :onchange "wpctl set-volume -l 0.7 @DEFAULT_AUDIO_SINK@ {}%")
+    (metric :class "cpu icon" :label ""
+      :onclick ""
+      :value cpu
+    :onchange "")
     (metric :class "ram icon" :label ""
       :onclick ""
       :value {EWW_RAM.used_mem_perc}
@@ -42,13 +46,13 @@
       :class "time"
       :valign "center"
       :space-evenly false
-      (button	:onclick "$HOME/.config/eww/bar/scripts/popup calendar"
+      (button	:onclick "sh $HOME/.config/eww/bar/scripts/popup calendar"
       :class "time" "${hour}:${min}")
       (revealer :transition "slideleft"
         :reveal time_rev
         :duration "350ms"
         (button :class "time"
-          :onclick "$HOME/.config/eww/bar/scripts/popup calendar" "${day}/${month}/${year}"
+          :onclick "sh $HOME/.config/eww/bar/scripts/popup calendar" "${day}/${month}/${year}"
         )
       )
     )))
@@ -106,8 +110,10 @@
       :year year))))
 
 (defwindow calendar
-  :geometry (geometry :x "-20px"
-    :y "7%"
+  :class "calendar"
+  :monitor 0
+  :geometry (geometry :x "20px"
+    :y "20px"
     :anchor "top right"
     :width "270px"
   :height "60px")
@@ -117,7 +123,7 @@
 (deflisten music :initial ""
 "playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
 
-(defpoll volume :interval "1s"
+(defpoll volume :interval "0.5s"
 "wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'")
 
 (defpoll bat :interval "30s"
@@ -125,6 +131,9 @@
 
 (defpoll time :interval "10s"
 "date '+%H:%M %b %d, %Y'")
+
+(defpoll cpu :interval "1s"
+"top -bn1 | grep 'Cpu(s)' | awk '{print 100 - $8}'")
 
 (defwindow bar
   :class "bar"
