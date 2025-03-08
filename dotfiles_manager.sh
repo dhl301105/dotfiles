@@ -29,7 +29,7 @@ if [[ ! -d "$dotfiles/.config" ]]; then
   mkdir -p "$dotfiles/.config"
 fi
 
-folders+="$@"
+folders+=$@
 
 for folder in $folders; do
   if [ "$flag_r" == "true" ] && [ -d "$dotfiles/.config/$folder" ]; then
