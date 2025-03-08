@@ -1,0 +1,21 @@
+#!/bin/sh
+
+eww="$HOME/dotfiles/release/eww"
+
+r() {
+  ${eww} update ws1=''
+  ${eww} update ws2=''
+  ${eww} update ws3=''
+  ${eww} update ws4=''
+  ${eww} update ws5=''
+  ${eww} update ws6=''
+}
+
+handle() {
+  if [ "$1" -gt 0 ] && [ "$1" -lt 7 ]; then
+    ${eww} update ws$1='focus'
+  fi
+}
+
+r
+handle $1

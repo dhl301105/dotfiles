@@ -1,0 +1,96 @@
+
+(defvar eww "$HOME/dotfiles/release/eww")
+
+(defvar ws1 "")
+(defvar ws2 "")
+(defvar ws3 "")
+(defvar ws4 "")
+(defvar ws5 "")
+(defvar ws6 "")
+
+(defwidget bar []
+  (centerbox :orientation "h"
+    (workspaces)
+    ""
+    (sidestuff)))
+
+(defwidget sidestuff []
+  (box :class "sidestuff" :orientation "h" :space-evenly false :halign "end" :valign "center"
+    (metric :class "volume icon" :label " 󰕾 "
+      :value volume
+    :onchange "wpctl set-volume -l 0.7 @DEFAULT_AUDIO_SINK@ {}%")
+    (metric :class "ram icon" :label " "
+      :value {EWW_RAM.used_mem_perc}
+    :onchange "")
+    (metric :class "disk icon" :label " "
+      :value {round((1 - (EWW_DISK["/"].free / EWW_DISK["/"].total)) * 100, 0)}
+    :onchange "")
+  (time)))
+
+;; Clock Widgets ;;
+(defwidget time []
+  (box	:orientation "h"
+    :class "time"
+    :valign "end"
+    (button	:onclick "scripts/popup calendar"
+    :class "time-hour" "${hour}:${min}")))
+(defpoll hour	:interval "1s"	"date '+%H'")
+(defpoll min	:interval "1s"	"date '+%M'")
+
+(defwidget workspaces []
+  (box :class "workspaces"
+    :orientation "h"
+    :space-evenly false
+    :halign "start"
+    :valign "center"
+    :spacing 0
+    (button :class "${ws1} button" :onclick "hyprctl dispatch workspace 1 && sh ./scripts/focus 1" "")
+    (button :class "${ws2} button" :onclick "hyprctl dispatch workspace 2 && sh ./scripts/focus 2" "")
+    (button :class "${ws3} button" :onclick "hyprctl dispatch workspace 3 && sh ./scripts/focus 3" "")
+    (button :class "${ws4} button" :onclick "hyprctl dispatch workspace 4 && sh ./scripts/focus 4" "")
+    (button :class "${ws5} button" :onclick "hyprctl dispatch workspace 5 && sh ./scripts/focus 5" "")
+    (button :class "${ws6} button" :onclick "hyprctl dispatch workspace 6 && sh ./scripts/focus 6" "")))
+
+(defwidget music []
+  (box :class "music"
+    :orientation "h"
+    :space-evenly false
+    :halign "center"
+  {music != "" ? "🎵${music}" : ""}))
+
+
+(defwidget metric [class label value onchange]
+  (box :orientation "h"
+    :class "metric"
+    :space-evenly false
+    (box :class class label)
+    (scale :min 0
+      :max 100
+      :orientation "h"
+      :active {onchange != ""}
+      :value value
+    :onchange onchange)))
+
+
+
+(deflisten music :initial ""
+"playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll volume :interval "1s"
+"wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2 * 100}'")
+
+(defpoll time :interval "10s"
+"date '+%H:%M %b %d, %Y'")
+
+(defwindow bar
+  :class "bar"
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0px"
+    :y "10px"
+    :width "97%"
+    :height "10px"
+  :anchor "top center")
+  :exclusive true
+  :reserve (struts :side "top" :distance "4%")
+  (bar))
