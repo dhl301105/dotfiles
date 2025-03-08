@@ -1,6 +1,6 @@
 #!/bin/sh
 
-eww="$HOME/dotfiles/release/eww"
+eww="$HOME/dotfiles/release/eww  -c $HOME/.config/eww/bar"
 
 # Reset tất cả workspace về trạng thái rỗng
 r() {

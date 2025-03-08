@@ -42,7 +42,7 @@
       :class "time"
       :valign "center"
       :space-evenly false
-      (button	:onclick "sh scripts/popup calendar"
+      (button	:onclick "$HOME/.config/eww/bar/scripts/popup calendar"
       :class "time" "${hour}:${min}")
       (revealer :transition "slideleft"
         :reveal time_rev
@@ -66,12 +66,12 @@
     :halign "start"
     :valign "center"
     :spacing 0
-    (button :class "${ws1} button" :onclick "hyprctl dispatch workspace 1 && sh ./scripts/focus 1" "")
-    (button :class "${ws2} button" :onclick "hyprctl dispatch workspace 2 && sh ./scripts/focus 2" "")
-    (button :class "${ws3} button" :onclick "hyprctl dispatch workspace 3 && sh ./scripts/focus 3" "")
-    (button :class "${ws4} button" :onclick "hyprctl dispatch workspace 4 && sh ./scripts/focus 4" "")
-    (button :class "${ws5} button" :onclick "hyprctl dispatch workspace 5 && sh ./scripts/focus 5" "")
-    (button :class "${ws6} button" :onclick "hyprctl dispatch workspace 6 && sh ./scripts/focus 6" "")))
+    (button :class "${ws1} button" :onclick "hyprctl dispatch workspace 1 && sh $HOME/.config/eww/bar/scripts/focus 1" "")
+    (button :class "${ws2} button" :onclick "hyprctl dispatch workspace 2 && sh $HOME/.config/eww/bar/scripts/focus 2" "")
+    (button :class "${ws3} button" :onclick "hyprctl dispatch workspace 3 && sh $HOME/.config/eww/bar/scripts/focus 3" "")
+    (button :class "${ws4} button" :onclick "hyprctl dispatch workspace 4 && sh $HOME/.config/eww/bar/scripts/focus 4" "")
+    (button :class "${ws5} button" :onclick "hyprctl dispatch workspace 5 && sh $HOME/.config/eww/bar/scripts/focus 5" "")
+    (button :class "${ws6} button" :onclick "hyprctl dispatch workspace 6 && sh $HOME/.config/eww/bar/scripts/focus 6" "")))
 
 ;; Workspaces Widgets ;;
 ; (defwidget workspaces []
