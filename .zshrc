@@ -13,11 +13,18 @@ compinit
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 
-bindkey '^[^?' backward-kill-word
+# bindkey '^[^?' backward-kill-word
 
 source ~/dotfiles/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+
+bindkey "^[[H" beginning-of-line
+# bindkey "^[[1~" beginning-of-line
+bindkey "^[[F" end-of-line
+
+
+
 
 r() {
   flag_s=false
