@@ -28,6 +28,19 @@ elif [ -f /etc/debian_version ]; then
   OS="debian"
   echo "Detected OS: $OS"
 
+  sudo apt update
+
+  sudo apt install fish python3 npm firefox-esr pipewire pipewire-alsa pipewire-pulse pipewire-jack wireplumber fzf network-manager alacritty polybar neovim xorg i3-gaps feh picom
+
+  systemctl --user enable --now pipewire.socket
+
+  systemctl --user enable --now pipewire-pulse.socket
+
+  systemctl --user enable --now wireplumber.service
+
+  systemctl enable NetworkManager
+
+  chsh -s /usr/bin/fish
 elif [ -f /etc/fedora-release ]; then
   OS="fedora"
   echo "Detected OS: $OS"
